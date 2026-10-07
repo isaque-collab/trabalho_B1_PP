@@ -1,7 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
 
 int main()
 {
+	system("chcp 65001 > null");
+    setlocale(LC_ALL, "pt-BR.UTF-8");
+	
 	int option, vitoria, empate, derrota, entradaValida, pontos, totalruim, totalregular, totalboa, totalexcelente;
 	int quantegp = 0, jogosegp = 0;
 
@@ -77,7 +82,7 @@ int main()
 					{
 						pontos = (vitoria * 3) + (empate * 1) + (derrota * 0);
 						printf("Eguipe %d: %d vitorias, %d empates, %d derrotas\n", i, vitoria, empate, derrota);
-						printf("Pontuação: %d", pontos);
+						printf("Pontuação: %d\n", pontos);
 						printf("Situação: ");
 						if (pontos < 5)
 						{
@@ -106,8 +111,7 @@ int main()
 			break;
 
 		case 2:
-			
-		
+
 			break;
 
 		case 3:
