@@ -2,12 +2,7 @@
 
 int main()
 {
-	int option;
-	int vitoria;
-	int derrota;
-	int empate;
-	int entradaValida;
-
+	int option, vitoria, empate, derrota, entradaValida, pontos, totalruim, totalregular, totalboa, totalexcelente;
 	int quantegp = 0, jogosegp = 0;
 
 	while (1)
@@ -47,6 +42,14 @@ int main()
 		switch (option)
 		{
 		case 1:
+			vitoria = 0;
+			empate = 0;
+			derrota = 0;
+			pontos = 0;
+			totalruim = 0;
+			totalregular = 0;
+			totalboa = 0;
+			totalexcelente = 0;
 			for (int i = 1; i <= quantegp; i++)
 			{
 				entradaValida = 0;
@@ -72,13 +75,39 @@ int main()
 					}
 					else
 					{
+						pontos = (vitoria * 3) + (empate * 1) + (derrota * 0);
+						printf("Eguipe %d: %d vitorias, %d empates, %d derrotas\n", i, vitoria, empate, derrota);
+						printf("Pontuação: %d", pontos);
+						printf("Situação: ");
+						if (pontos < 5)
+						{
+							printf("Campanha ruim!\n");
+							totalruim++;
+						}
+						else if (pontos >= 5 && pontos <= 9)
+						{
+							printf("Campanha regular!\n");
+							totalregular++;
+						}
+						else if (pontos >= 10 && pontos <= 14)
+						{
+							printf("Boa campanha!\n");
+							totalboa++;
+						}
+						else if (pontos >= 15)
+						{
+							printf("Excelente campanha!\n");
+							totalexcelente++;
+						}
 						entradaValida = 1;
 					}
 				}
 			}
+			break;
 
 		case 2:
-			printf("Opção 2\n");
+			
+		
 			break;
 
 		case 3:
