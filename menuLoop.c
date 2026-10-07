@@ -32,7 +32,7 @@ int main(){
 				printf("\nSimulacao escolhido\n\n");
 			break;
 			case 5:
-				printf("\nSaindo do Sistema........\n\n");
+				printf("\nSaindo do Sistema........");
 			break;
 			default:
 				printf("\nOpcao Invalida\n\n");
