@@ -5,9 +5,9 @@
 int main()
 {
 	system("chcp 65001 > null");
-    setlocale(LC_ALL, "pt-BR.UTF-8");
-	
-	int option, vitoria, empate, derrota, entradaValida, pontos, totalruim, totalregular, totalboa, totalexcelente;
+	setlocale(LC_ALL, "pt-BR.UTF-8");
+
+	int option, vitoria, empate, derrota, pontos, totalruim, totalregular, totalboa, totalexcelente;
 	int quantegp = 0, jogosegp = 0;
 
 	while (1)
@@ -57,17 +57,17 @@ int main()
 			totalexcelente = 0;
 			for (int i = 1; i <= quantegp; i++)
 			{
-				entradaValida = 0;
+				int entradaValida = 0;
 
 				while (entradaValida == 0)
 				{
-					printf("\nEquipe %d - vitorias: ", i);
+					printf("\nEquipe %d - vitoria(s): ", i);
 					scanf("%d", &vitoria);
 
-					printf("Equipe %d - empates: ", i);
+					printf("Equipe %d - empate(s): ", i);
 					scanf("%d", &empate);
 
-					printf("Equipe %d - derrotas: ", i);
+					printf("Equipe %d - derrota(s): ", i);
 					scanf("%d", &derrota);
 
 					if (vitoria < 0 || empate < 0 || derrota < 0)
@@ -76,12 +76,12 @@ int main()
 					}
 					else if (vitoria + empate + derrota != jogosegp)
 					{
-						printf("A soma deve ser igual a %d jogos.\n", jogosegp);
+						printf("A soma deve ser igual a %d jogo(s).\n", jogosegp);
 					}
 					else
 					{
 						pontos = (vitoria * 3) + (empate * 1) + (derrota * 0);
-						printf("Eguipe %d: %d vitorias, %d empates, %d derrotas\n", i, vitoria, empate, derrota);
+						printf("Eguipe %d: %d vitoria(s), %d empate(s), %d derrota(s)\n", i, vitoria, empate, derrota);
 						printf("Pontuação: %d\n", pontos);
 						printf("Situação: ");
 						if (pontos < 5)
@@ -115,7 +115,15 @@ int main()
 			break;
 
 		case 3:
-			printf("Opção 3\n");
+			printf("=== Regulamento do Campeonato ===\n");
+			printf("1. Cada vitória vale 3 pontos.\n");
+			printf("2. Cada empate vale 1 ponto.\n");
+			printf("3. Derrotas não concedem pontos.\n");
+			printf("4. 15 ou mais pontos é considerado uma excelente campanha.\n");
+			printf("5. Entre 10 e 14 pontos é considerado uma boa campanha.\n");
+			printf("6. Entre 5 e 9 pontos é considerado uma campanha regular.\n");
+			printf("7. Menos de 5 pontos é considerado uma campanha ruim.\n");
+			printf("8. O campeonato é disputado entre 3 a 10 equipes, cada uma jogando de 1 a 10 partidas.\n");
 			break;
 
 		case 4:
