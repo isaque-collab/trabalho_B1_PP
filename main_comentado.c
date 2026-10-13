@@ -1,20 +1,3 @@
-/*
- * Práticas Profissionais II - Sistema de Controle de Campeonato (sem vetores)
- * Professor: Sidney de Castro Lima
- *
- * Integrantes:
- *   1. ______________________
- *   2. ______________________
- *   3. ______________________
- *
- * IDEIA GERAL DO PROGRAMA:
- *   - O programa NÃO guarda cada equipe. Ele processa uma equipe por vez e vai
- *     somando tudo em "acumuladores" (totais, contadores, maior/menor pontuação).
- *   - No final, o resumo (opção 2) só lê esses acumuladores.
- *   - Estruturas usadas: while/do-while (menu e validações), for (equipes e
- *     simulações), switch (menu), if/else if (validação e classificação).
- */
-
 #include <stdio.h>
 
 int main(void)
